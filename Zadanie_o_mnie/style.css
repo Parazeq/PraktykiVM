@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: linear-gradient(120deg, #a8c0ff, #f8f9ff, #dce3ff);
+    background-size: 200% 200%;
+    animation: gradientMove 8s ease infinite;
+    color: #222;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+header {
+    background: #ffffff;
+    text-align: center;
+    margin-top: 60px;
+    padding: 40px;
+    border-radius: 20px;
+    width: 80%;
+    max-width: 700px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    animation: fadeIn 1s ease;
+}
+
+header h1 {
+    animation: slideDown 1s ease;
+    color: #2b4eff;
+    font-size: 2.2em;
+    margin-bottom: 10px;
+}
+
+header h2 {
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+#header1, #header2 {
+    color: #333;
+    line-height: 1.5em;
+    margin-bottom: 8px;
+}
+
+#oMnie {
+    background: #fff;
+    margin-top: 30px;
+    padding: 30px 50px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    width: 60%;
+    max-width: 500px;
+    animation: fadeIn 1s ease;
+}
+
+#oMnie h1 {
+    color: #2b4eff;
+    margin-bottom: 10px;
+}
+
+#oMnie a {
+    text-decoration: none;
+    color: white;
+    background: #2b4eff;
+    padding: 10px 20px;
+    border-radius: 12px;
+    display: inline-block;
+    margin-top: 10px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+#oMnie a:hover {
+    background: #1a33cc;
+    transform: scale(1.05);
+}
+
+#oMnie img {
+    width: 200px;
+    height: auto;
+    margin: 20px 0;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#oMnie img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+#wiecej, #gra, #cv {
+    background: #ffffff;
+    margin-top: 40px;
+    padding: 30px;
+    border-radius: 20px;
+    width: 60%;
+    text-align: center;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    animation: fadeIn 1s ease;
+}
+
+#wiecej h1, #gra h1, #cv h1 {
+    color: #2b4eff;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+#wiecej a, #gra a, #cv a {
+    text-decoration: none;
+    color: white;
+    background: #2b4eff;
+    padding: 10px 25px;
+    border-radius: 12px;
+    display: inline-block;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(43, 78, 255, 0.3);
+}
+
+#wiecej a:hover, #gra a:hover, #cv a:hover {
+    background: #1a33cc;
+    transform: scale(1.05);
+}
+
+#wiecej a:active, #gra a:active, #cv a:active {
+    transform: scale(0.97);
+}
+
+header, #oMnie, #wiecej, #gra, #cv {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-40px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
