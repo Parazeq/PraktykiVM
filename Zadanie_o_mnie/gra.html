@@ -3,20 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <title>Gra</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stylegame.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
     <meta name="Author" content="Jakub Kocur">
 </head>
 <body>
 <header>
-    <h1>Gra w ciepło/zimno</h1>
+    <h1>Gra w Memory</h1>
 </header>
-<section id="oMnie">
-    <p>Wybierz liczbę od 1 do 10:</p>
-    <input type="number" id="userGuess" min="1" max="10">
-    <button onclick="sprawdz()">Sprawdź</button>
-    <p id="result"></p>
-</section>
+<div class="container" role="application" aria-label="Memory — gra w pary">
+    <header>
+        <h1>Memory — znajdź wszystkie pary</h1>
+        <div class="controls">
+            <div class="stats" aria-live="polite">
+                <div>Ruchy: <strong id="moves">0</strong></div>
+                <div>Czas: <strong id="time">00:00</strong></div>
+                <div>Pary: <strong id="pairs">0</strong>/<span id="totalPairs">8</span></div>
+            </div>
+            <button id="restart" title="Rozpocznij od nowa">Restart</button>
+            <button id="sizeBtn" class="secondary" title="Zmień rozmiar planszy">4×4</button>
+        </div>
+    </header>
+
+    <main>
+        <div id="board" class="board" data-size="4" aria-label="Plansza z kartami"></div>
+        <div class="hint">Wybierz kartę by ją odsłonić. Znajdź wszystkie pary!</div>
+    </main>
+    <footer>
+        Możesz zmienić rozmiar planszy (4×4 lub 6×6) • <em>Powodzenia!</em>
+    </footer>
+</div>
+<div id="overlay" class="overlay" role="dialog" aria-modal="true">
+    <div class="modal">
+        <h2 id="winTitle">Gratulacje!</h2>
+        <p id="winText">Znalazłeś wszystkie pary.</p>
+        <div style="display:flex;gap:8px;justify-content:center;margin-top:12px">
+            <button id="playAgain">Zagraj jeszcze raz</button>
+            <button id="closeOverlay" class="secondary">Zamknij</button>
+        </div>
+    </div>
+</div>
 <script src="main.js"></script>
 <section id="wiecej">
     <h1>Strona główna</h1>
